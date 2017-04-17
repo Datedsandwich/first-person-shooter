@@ -1098,10 +1098,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 1081367224}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1e5a2cd8e323b3b42a7f5a6c5d0e58a9, type: 3}
+  m_Script: {fileID: 11500000, guid: a5d61d8f031f3a9498b5fd5fac710603, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  currentHealth: 3
+  value: 3
 --- !u!54 &1081367227
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -1693,10 +1693,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 1180305466}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1e5a2cd8e323b3b42a7f5a6c5d0e58a9, type: 3}
+  m_Script: {fileID: 11500000, guid: a5d61d8f031f3a9498b5fd5fac710603, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  currentHealth: 3
+  value: 3
 --- !u!54 &1180305469
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -2116,7 +2116,7 @@ LineRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1505249017}
-  m_Enabled: 1
+  m_Enabled: 0
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_MotionVectors: 0
@@ -2146,7 +2146,7 @@ LineRenderer:
   - {x: 0, y: 0, z: 1}
   m_Parameters:
     serializedVersion: 2
-    widthMultiplier: 1
+    widthMultiplier: 0.05
     widthCurve:
       serializedVersion: 2
       m_Curve:
@@ -2214,7 +2214,7 @@ MonoBehaviour:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1505249017}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 86153bbba931aff4291a5a73a9a75673, type: 3}
   m_Name: 

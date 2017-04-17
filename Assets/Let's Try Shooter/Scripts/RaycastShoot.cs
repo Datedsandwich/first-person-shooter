@@ -42,6 +42,8 @@ public class RaycastShoot : MonoBehaviour {
 		laserLine.SetPosition (0, gunEnd.position);
 		if (Physics.Raycast (getRayOrigin(), fpsCam.transform.forward, out hit, weaponRange)) {
 			laserLine.SetPosition (1, hit.point);
+			DamageTarget (hit);
+			KnockbackTarget (hit);
 		}
 		else {
 			laserLine.SetPosition (1, fpsCam.transform.forward * weaponRange);
@@ -59,6 +61,19 @@ public class RaycastShoot : MonoBehaviour {
 		yield return shotDuration;
 
 		laserLine.enabled = false;
+	}
+
+	private void DamageTarget (RaycastHit hit) {
+		Health target = hit.transform.GetComponent<Health> ();
+		if (target) {
+			target.Damage (gunDamage);
+		}
+	}
+
+	private void KnockbackTarget (RaycastHit hit) {
+		if (hit.rigidbody) {
+			hit.rigidbody.AddForce (-hit.normal * hitForce);
+		}
 	}
 
 	private Vector3 getRayOrigin() {
